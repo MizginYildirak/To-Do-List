@@ -125,6 +125,6 @@ ul li span:hover {
 
 @media only screen and (max-width: 576px) {
     #todo-app {
-        max-width: 420px;
+        max-width: 350px;
     }
 }
