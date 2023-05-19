@@ -6,6 +6,8 @@ arrow.addEventListener("click", () => {
     if (inputBox.value === '') {
         alert("You must write something!")
     } else {
+        spaceBlock()
+
         const li = document.createElement("li")
         li.innerHTML = inputBox.value;
         listContainer.appendChild(li)
@@ -32,6 +34,11 @@ arrow.addEventListener("click", () => {
     inputBox.value = ""
 })
 
-
+function spaceBlock() {
+    if (inputBox.selectionStart === 0 && window.event.code === "Space") {
+        window.event.preventDefault()
+    }
+}
+ 
 
 

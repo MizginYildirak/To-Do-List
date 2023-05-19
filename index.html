@@ -21,7 +21,7 @@
         <div id="todo-app">
             <h2>To-Do List</h2>
             <div class="input-group">
-                <input type="text" id="input-box" placeholder="Add new task">
+                <input type="text" id="input-box" onkeydown="spaceBlock()" placeholder="Add new task">
                 <button id="arrow" onclick="addTask()"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
 
