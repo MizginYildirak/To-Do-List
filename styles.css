@@ -52,13 +52,11 @@ h2 {
     height: 50px;
     background-color: #ffffff;
     width: 100%;
-
 }
 
 #todo {
     margin-top: 2rem;
 }
-
 
 input {
     background-color: transparent;
