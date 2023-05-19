@@ -6,6 +6,9 @@
 
 body {
     background-image: url(./609938.jpg);
+    background-repeat: repeat no-repeat;
+    background-size: cover;
+    height: 100%;
     /* background-color: #B0DAFF; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -89,6 +92,7 @@ ul li {
     position: relative;
     margin-top: 1rem;
     cursor: pointer;
+    overflow: hidden;
 }
 
 ul li span {
