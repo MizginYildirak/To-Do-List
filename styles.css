@@ -110,15 +110,15 @@ ul li span:hover {
 }
 
 .check.clicked::before {
-    background-color: black;
+    background-color: #151922;
 }
 
 .check::before {
     content: '';
-    border: 1px solid black;
+    border: 1px solid #151922;
     width: 10px;
     height: 10px;
-    color: black;
+    color: #151922;
     position: absolute;
     left: 15px;
     top: 40%;

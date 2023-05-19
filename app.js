@@ -39,6 +39,10 @@ function spaceBlock() {
         window.event.preventDefault()
     }
 }
- 
 
+inputBox.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        arrow.click()
+    }
+})
 
