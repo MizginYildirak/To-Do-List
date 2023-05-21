@@ -1,8 +1,8 @@
 # To-Do-List
 
-<h1>Counter App</h1>
+<h1>TO-DO LIST</h1>
   
- This is a clone Counter-App website.
+ This is a TO-DO LIST.
 
 - Table of contents 
 - Overview 
