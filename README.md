@@ -21,7 +21,7 @@
 - This is a simple tool for counting things and keeping truck of numbers.
 
 
-![SimpleCounter](https://ibb.co/JzshD6d)
+![SimpleCounter](https://i.ibb.co/vJjt0yB/resim-2023-05-21-155349314.png)
 
 Project Skeleton
 
