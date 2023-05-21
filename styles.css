@@ -9,6 +9,7 @@ body {
     background-repeat: repeat no-repeat;
     background-size: cover;
     height: 100%;
+    height: 100vh;
     /* background-color: #B0DAFF; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -140,6 +141,7 @@ ul li span:hover {
 }
 
 @media only screen and (max-width: 576px) {
+
     #todo-app {
         max-width: 300px;
     }
