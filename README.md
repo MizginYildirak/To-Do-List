@@ -60,7 +60,7 @@ Project Skeleton
 To see how you can add code snippets, see below:
 
 Some JS code I'm proud of
-```javascriptfunction removeTask(index) {
+```javascript function removeTask(index) {
     tasks.splice(index, 1)
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
