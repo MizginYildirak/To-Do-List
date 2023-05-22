@@ -23,7 +23,6 @@ body {
 }
 
 #todo-app {
-    max-height: 700px;
     width: 600px;
     margin: 100px auto 20px;
     padding: 40px 30px 60px;
@@ -36,7 +35,6 @@ body {
     color: #eeeeee;
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    overflow-x: hidden;
 }
 
 h2 {
@@ -59,6 +57,8 @@ h2 {
 
 #todo {
     margin-top: 2rem;
+    max-height: 500px;
+    overflow-x: hidden;
 }
 
 input {
