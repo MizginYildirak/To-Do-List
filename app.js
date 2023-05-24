@@ -1,6 +1,7 @@
 const arrow = document.getElementById("arrow")
 const listContainer = document.getElementById("list-container")
 const inputBox = document.getElementById("input-box")
+
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 addList()
@@ -13,8 +14,8 @@ arrow.addEventListener("click", (e) => {
         let inputBoxValue = inputBox.value;
         saveTasks(inputBoxValue);
         refreshList(); // Clear the existing task list and add tasks again
-
     }
+    
     inputBox.value = "";
 });
 
@@ -57,7 +58,6 @@ function removeTask(index) {
     tasks.splice(index, 1)
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
-
 
 function spaceBlock() {
     if (inputBox.selectionStart === 0 && window.event.code === "Space") {
