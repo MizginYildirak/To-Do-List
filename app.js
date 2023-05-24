@@ -2,44 +2,44 @@ const arrow = document.getElementById("arrow")
 const listContainer = document.getElementById("list-container")
 const inputBox = document.getElementById("input-box")
 
-let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+let tasks = JSON.parse(localStorage.getItem('tasks')) || []
 
 addList()
 
 arrow.addEventListener("click", (e) => {
     if (inputBox.value === '') {
-        alert("You must write something!");
+        alert("You must write something!")
     } else {
         spaceBlock();
-        let inputBoxValue = inputBox.value;
-        saveTasks(inputBoxValue);
-        refreshList(); // Clear the existing task list and add tasks again
+        let inputBoxValue = inputBox.value
+        saveTasks(inputBoxValue)
+        refreshList() // Clear the existing task list and add tasks again
     }
     
-    inputBox.value = "";
+    inputBox.value = ""
 });
 
 function refreshList() {
     // Clear the existing task list
-    listContainer.innerHTML = '';
+    listContainer.innerHTML = ''
     // Add tasks to the list
-    addList();
+    addList()
 }
 
 function addList() {
     tasks.forEach(item => {
-        const li = document.createElement("li");
-        li.innerHTML = item;
-        listContainer.appendChild(li);
-        li.classList.add("check");
-        const span = document.createElement("span");
-        span.innerHTML = "\u00d7";
-        li.appendChild(span);
+        const li = document.createElement("li")
+        li.innerHTML = item
+        listContainer.appendChild(li)
+        li.classList.add("check")
+        const span = document.createElement("span")
+        span.innerHTML = "\u00d7"
+        li.appendChild(span)
 
         span.addEventListener("click", () => {
-            const index = tasks.indexOf(item);
-            span.parentElement.remove();
-            removeTask(index);
+            const index = tasks.indexOf(item)
+            span.parentElement.remove()
+            removeTask(index)
         });
 
         li.addEventListener('click', function () {
@@ -56,7 +56,7 @@ function addList() {
 
 function removeTask(index) {
     tasks.splice(index, 1)
-    localStorage.setItem('tasks', JSON.stringify(tasks));
+    localStorage.setItem('tasks', JSON.stringify(tasks))
 }
 
 function spaceBlock() {
