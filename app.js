@@ -12,10 +12,10 @@ arrow.addEventListener("click", (e) => {
     } else {
         spaceBlock();
         let inputBoxValue = inputBox.value
-        saveTasks(inputBoxValue)
+        saveTasks({ value: inputBoxValue, checked: false })
         refreshList() // Clear the existing task list and add tasks again
     }
-    
+
     inputBox.value = ""
 });
 
@@ -28,10 +28,12 @@ function refreshList() {
 
 function addList() {
     tasks.forEach(item => {
+
         const li = document.createElement("li")
-        li.innerHTML = item
+        li.innerHTML = item.value
         listContainer.appendChild(li)
         li.classList.add("check")
+
         const span = document.createElement("span")
         span.innerHTML = "\u00d7"
         li.appendChild(span)
@@ -42,13 +44,22 @@ function addList() {
             removeTask(index)
         });
 
+        if (item.checked) {
+            li.style.textDecoration = "line-through"
+            li.classList.add('clicked')
+        }
+
         li.addEventListener('click', function () {
             if (this.classList.contains('clicked')) {
                 this.classList.remove('clicked')
                 this.style.textDecoration = "none"
+                item.checked = false
+                localStorage.setItem('tasks', JSON.stringify(tasks));
             } else {
                 this.classList.add('clicked')
                 this.style.textDecoration = "line-through"
+                item.checked = true
+                localStorage.setItem('tasks', JSON.stringify(tasks));
             }
         })
     });
